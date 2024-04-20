@@ -1,0 +1,143 @@
+header
+    background: $gradientBg, $textLight url(../img/bg-one.jpg) no-repeat center
+    background-size: cover 
+.wrapper .navbar-toggler
+    border: 1px solid $textLight
+    background: center url(../img/burger.svg) no-repeat
+    outline: none
+    &-icon
+        background-image: unset
+.wrapper .navbar-brand
+    font-size: 36px
+    line-height: 21px
+    color: $textLight
+    font-family: "Exo 2"
+    &:hover
+        color: $textLight
+    &:active
+        color: $textLight
+.wrapper
+    width: 95%
+    margin: auto
+    +media(768)
+        width: 75%
+        
+.nav-item .nav-link
+    font-size: 12px
+    letter-spacing: 1px
+    color: $textLight
+    font-family: "Rubik"
+    +media(1440)
+        font-size: 14px
+    &:hover
+        color: $primary
+.header-info
+    padding: 80px 0 45px 0
+    +media(768)
+        padding: 120px 0 45px 0
+    +media(1024)
+        padding: 150px 0 45px 0
+    +media(2560)
+        padding: 200px 0 45px 0
+.top-title
+    max-width: 690px
+    font-size: 52px
+    letter-spacing: 1px
+    color: $textLight
+    font-family: "Rubik"
+    +media(1024)
+        font-size: 72px
+    &::before
+        +media(768)
+            content: ''
+            position: absolute
+            width: 370px
+            height: 40px
+            top: -70%
+            left: 18%
+            border: 4px solid $textLight
+            border-bottom: transparent
+            opacity: 0.2
+        +media(1024)
+            left: 23%
+    &::after
+        +media(768)
+            content: ''
+            position: absolute
+            width: 370px
+            height: 90px
+            top: 215%
+            left: 18%
+            border: 4px solid $textLight
+            border-top: transparent
+            opacity: 0.2
+        +media(1024)
+            left: 23%
+.top-text
+    max-width: 560px
+    font-size: 16px
+    line-height: 24px
+    color: $textLight
+    font-family: "Rubik"
+.button
+    max-width: 170px
+    margin: auto
+    margin-bottom: 130px
+    padding: 9.5px
+    border-radius: 23px
+    filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
+    background-color: $primary
+    border: 2px solid transparent
+    font-size: 16px
+    letter-spacing: 1px
+    color: $buttonText
+    font-family: "Rubik"
+    transition: all 0.3s ease
+    +media(375)
+        margin-bottom: 140px
+    +media(768)
+        margin-bottom: 130px
+    +media(1440)
+        margin-bottom: 200px
+    &:hover
+        border: 2px solid $primary
+        background-color: $buttonText
+        color: $primary
+.button-two
+    max-width: 170px
+    padding: 9.5px
+    border-radius: 23px
+    background-color: rgba(0,153,255,0)
+    border: 2px solid $buttonBorder
+    font-size: 16px
+    letter-spacing: 1px
+    color: $buttonBorder
+    font-family: "Rubik"
+    transition: all 0.3s ease
+    &:hover
+        background-color: $buttonBorder
+        color: $textLight
+.down-title
+    max-width: 316px
+    font-size: 30px
+    letter-spacing: 1px
+    line-height: 34px
+    color: $textDark
+    font-family: "Rubik"
+    +media(768)
+        font-size: 36px
+        line-height: 44px
+.down-text
+    font-size: 16px
+    line-height: 24px
+    color: $textDark
+    font-family: "Rubik"
+
+.arrow
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    &__icon
+        background: url(../img/arrow.svg) no-repeat
+        width: 20px
+        height: 20px
