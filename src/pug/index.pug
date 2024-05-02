@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="uk")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -24,116 +24,113 @@ html(lang="en")
         include components/sprite.pug
 
         main#main
-            .offer.wrapper.container
-                .row.justify-content-center.justify-content-xl-between
-                    .card-info.col-3.p-0
-                        h2.fw-normal.text-uppercase.mb-4.text-center.text-md-start про нашу компанію
-                        p.fw-normal.fst-italic.mb-5.text-center.text-md-start Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-                        a.button.d-block.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal.m-auto.m-md-0.mb-3.mb-md-3(href="#") детальніше
-                        p.warning.fw-normal.text-center.text-md-start * - зверніть увагу, зміна ціни може залежати від курсу долара.
-                    +card("#img_one", "Тур на велосипедах", "335 грн*", "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.", "unbefore")
-                    +card("#img_two", "Екскурсія на острів", "500 грн*", "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .", "before")
-                    +card("#img_three", "Особливе замовлення", "250 грн*", "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.", "before")
-                    a.all-plans.d-block.text-center.text-uppercase.text-decoration-none.fw-normal.col-12.col-xxl-9.offset-xxl-3.p-0(href="#") 
-                        span.position-relative дивитись усі плани
-            .island.container 
-                .row
-                    .col-7.col-xl-4.offset-3.offset-xxl-0
-                        img.w-100(src="img/island_img.png", alt="#")
-                    .col.offset-lg-1.offset-xxl-0
-                        .container
-                            .row
-                                .col
-                                    h2.text-uppercase.fw-normal Дивовижний безлюдний острів, який зводить людей з розуму
-                            .row
-                                .col
-                                    .island-nav.container 
-                                        .row 
-                                            .col
-                                                p.fw-normal.fst-italic Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
-                                        .row
-                                            .col-12.col-sm-5
-                                                a.button.d-block.m-auto.m-md-0.mb-2.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal(href="#") замовити тур
-                                            .col
-                                                a.button-two.d-block.m-auto.m-md-0.mb-2.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal(href="#") детальніше
-                                .col
-                                    .island-info.container
-                                        .row 
-                                            .col 
-                                                a.d-block.text-center.fw-normal.text-decoration-none(href="#") 575 грн./день
-                                        .row 
-                                            .col
-                                                p.text-center.m-auto.fw-normal В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
-            .catch-wave
-                .catch-wave-info.container 
+            .wrapper.w-md-75
+                .offer.container
+                    .row.justify-content-center.column-gap-lg-3.column-gap-xl-0.justify-content-xl-between.m-0
+                        .card-info.col-11.col-sm-9.col-md-6.col-lg-5.col-xl-3.p-0
+                            h2.fw-normal.text-uppercase.mb-4.text-center.text-md-start про нашу компанію
+                            p.fw-normal.fst-italic.mb-5.text-center.text-md-start Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                            a.button.d-block.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal.m-auto.m-md-0.mb-3.mb-md-3(href="#") детальніше
+                            p.warning.fw-normal.text-center.text-md-start * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                        +card("#img_one", "Тур на велосипедах", "335 грн*", "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.", "unbefore")
+                        +card("#img_two", "Екскурсія на острів", "500 грн*", "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .", "before")
+                        +card("#img_three", "Особливе замовлення", "250 грн*", "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.", "before")
+                        a.all-plans.d-block.text-center.text-uppercase.text-decoration-none.fw-normal.col-12.col-xxl-9.offset-xxl-3.p-0(href="#") 
+                            span.position-relative дивитись усі плани
+                .island.container 
                     .row
-                        .col-11.col-lg-6.offset-md-1.offset-lg-0
-                            .container 
-                                .row
-                                    .col 
-                                        h2.fw-normal.text-uppercase СПІЙМАЙ ХВИЛЮ
-                                            span.d-block ЖИВИ ЯСКРАВО!
-                                .row
-                                    .col 
-                                        p.fw-normal.text Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
-                                .row
-                                    .col 
-                                        a.button.d-block.m-0.mb-5.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal(href="#") замовити тур
-                        .col 
+                        .col-xxl-4.offset-0
+                            img.w-100.mb-3(src="img/island_img.png", alt="#")
+                        .col.offset-lg-1.offset-xxl-0
                             .container
                                 .row
-                                    .col 
-                                        img.d-block.m-auto.mb-1(src="img/quotes.svg", alt="#")
+                                    .col
+                                        h2.text-uppercase.fw-normal Дивовижний безлюдний острів, який зводить людей з розуму
                                 .row
-                                    .col 
-                                        p.description.position-relative.fw-normal.fst-italic.m-auto Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
-                                .row
-                                    .col 
-                                        a.text-decoration-none(href="#") 
-                                            p.name.fw-normal.text-center.m-0 Олег Набережний
-                                            p.fw-normal.text-center.m-0 клієнт
-                                            img.d-block.m-auto(src="img/catch_wave_img.png" alt="#")
-            .offer-week.container 
-                .row
-                    .col 
-                        h2.text-center.text-uppercase.fw-normal Спеціальні пропозиції тижня
-                        p.main-text.mb-4.text-center.fw-normal.fst-icalic Гарячі праозиції, по-швидше обирай і поїхали!
-                .row
-                    .col
+                                    .col-12.col-xxl
+                                        .island-nav.container 
+                                            .row 
+                                                .col
+                                                    p.fw-normal.fst-italic Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                                            .row.mb-4.mb-xxl-0
+                                                .col-12.col-sm-6
+                                                    a.button.d-block.m-auto.m-md-0.mb-2.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal(href="#") замовити тур
+                                                .col
+                                                    a.button-two.d-block.m-auto.m-md-0.mb-2.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal(href="#") детальніше
+                                    .col
+                                        .island-info.w-100.container
+                                            .row 
+                                                .col 
+                                                    a.d-block.text-center.fw-normal.text-decoration-none(href="#") 575 грн./день
+                                            .row 
+                                                .col
+                                                    p.text-center.m-auto.fw-normal В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+            .catch-wave
+                .wrapper
+                    .catch-wave-info.container 
+                        .row
+                            .col-12.col-xl-6
+                                .container 
+                                    .row
+                                        .col 
+                                            h2.fw-normal.text-uppercase.text-center.text-xl-start СПІЙМАЙ ХВИЛЮ
+                                                span.d-block ЖИВИ ЯСКРАВО!
+                                    .row
+                                        .col 
+                                            p.fw-normal.text-center.text-xl-start.m-auto.mb-4.mb-xl-4.m-xl-0.text Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                                    .row
+                                        .col 
+                                            a.button.d-block.m-0.m-auto.m-xl-0.mb-5.text-center.rounded-pill.text-decoration-none.text-uppercase.fw-normal(href="#") замовити тур
+                            .col 
+                                .container
+                                    .row
+                                        .col 
+                                            img.d-block.m-auto.mb-1(src="img/quotes.svg", alt="#")
+                                    .row
+                                        .col 
+                                            p.description.position-relative.fw-normal.fst-italic.m-auto Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                                    .row
+                                        .col 
+                                            a.text-decoration-none(href="#") 
+                                                p.name.fw-normal.text-center.m-0 Олег Набережний
+                                                p.fw-normal.text-center.m-0 клієнт
+                                                img.d-block.m-auto(src="img/catch_wave_img.png" alt="#")
+            .wrapper
+                .offer-week.container 
+                    .row
+                        .col 
+                            h2.text-center.text-uppercase.fw-normal Спеціальні пропозиції тижня
+                            p.main-text.mb-4.text-center.fw-normal.fst-icalic Гарячі праозиції, по-швидше обирай і поїхали!
+                    .row 
                         +bottomCard("img/week_img_one.png", "before", "Романтична подорож на 2", "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.", "2599 грн.", "замовити")
-                    .col 
                         +bottomCard("img/week_img_two.png", "before-plus", "Велотур", "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!", "555 грн.", "замовити")
-                    .col 
                         +bottomCard("img/week_img_three.png", "before", "На острови!", "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!", "1559 грн.", "замовити")
-                    .col 
                         +bottomCard("img/week_img_four.png", "before", "Катання на сьорфінгу", "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!", "999 грн.", "замовити")
-            .main-bottom.container 
-                .row.flex-wrap
-                    .padding.col-12.col-md 
-                        h2.fw-normal.text-transform-uppercase.m-auto додаткова інформація
-                    .padding.col-12.col-md.d-flex.flex-wrap.align-items-stretch.justify-content-center
+                .main-bottom.container
+                    .row.flex-wrap.m-0
+                        .pt-3.col-12.col-sm-10.col-md-6.col-xl-3.offset-sm-1.offset-md-0
+                            h2.fw-normal.text-transform-uppercase.m-auto.mb-3 додаткова інформація
                         +mainBottomCard("Графік роботи готелів.xls", "Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.", "bg-one")
-                    .padding.col-12.col-md.d-flex.flex-wrap.align-items-stretch.justify-content-center
                         +mainBottomCard("Інформація про харчування.xls", "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.", "bg-two")
-                    .col-12.col-md.d-flex.flex-wrap.align-items-stretch
-                        .ask-question.container
-                            .row
-                                .col 
-                                    h3.text-center.fw-normal.mb-4.position-relative задати питання
-                            .row
-                                .col 
-                                    p.text-center.fw-normal.m-auto.mb-4 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
-                            .row
-                                .col 
-                                    a.tel.d-block.text-center.fw-normal.text-decoration-none.mb-4(href="tel:+380505698511") 
-                                        img(src="img/phone.svg", alt="#")
-                                        |+38 (050) 56 98 511
-                            .row
-                                .col 
-                                    a.text-decoration-none.position-relative(href="#") 
-                                        b.d-block.text-center.fw-normal Анна Миколаївна
-                                        span.d-block.text-center.fw-normal консультант 
-                                        img.position-absolute(src="img/main_bottom_img.png", alt="#")
-                
+                        .col-12.col-sm-10.col-md-6.col-xl-3.offset-sm-1.offset-md-0
+                            .ask-question.position-relative.container
+                                .row
+                                    .col 
+                                        h3.text-center.fw-normal.mb-4 задати питання
+                                .row
+                                    .col 
+                                        p.text-center.fw-normal.m-auto.mb-4 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                                .row
+                                    .col 
+                                        a.tel.d-block.text-center.fw-normal.text-decoration-none.mb-4(href="tel:+380505698511") 
+                                            img(src="img/phone.svg", alt="#")
+                                            |+38 (050) 56 98 511
+                                .row
+                                    .col 
+                                        a.text-decoration-none.position-relative(href="#") 
+                                            b.d-block.text-center.fw-normal Анна Миколаївна
+                                            span.d-block.text-center.fw-normal консультант 
+                                            img.position-absolute(src="img/main_bottom_img.png", alt="#")
+            
         include components/footer.pug
         script(src="js/bootstrap.bundle.min.js") 

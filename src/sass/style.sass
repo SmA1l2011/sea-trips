@@ -10,6 +10,10 @@
 
 main
     background-color: $backgroundColor
+#main .wrapper
+    margin: auto
+    +media(768)
+        width: 82%
 .hidden
     display: none
 .all-plans
@@ -37,18 +41,14 @@ main
             top: 0
             left: calc( 100% + 7px )
             background: url(../img/arrow-two.svg)
-.offer
+#main .offer
     padding: 20px 0 70px 0
     border-bottom: 1px solid #dfe3e6
 .wrapper .offer__card
-    width: 245px
-    max-height: 290px
     transition: all 0.3s ease
     border: 3px solid #25cb14
     +media(768)
         border: unset
-    +media(1440)
-        width: 270px
     & .icon
         width: 60px
         height: 53px
@@ -92,7 +92,6 @@ main
         padding: 22px 0 25px 0
         max-width: 205px
 .wrapper .card-info
-    width: 270px
     & h2
         font-size: 30px
         letter-spacing: 1px
@@ -114,9 +113,12 @@ main
 .catch-wave .button
     max-width: 180px
 .island
-    & img
-        max-width: 355px
     padding: 75px 0
+    & img
+        display: none
+        max-width: 355px
+        +media(1400)
+            display: inline-block
     & .button,
     & .button-two
         max-width: 180px
@@ -130,31 +132,37 @@ main
             font-size: 36px
             line-height: 42px
 .island .island-info
-    padding: 20px 0
-    max-width: 285px
-    background-color: #edf2f5
+    padding: 20px 0 90px 0
+    background: 50% 70% url(../img/island_img.png) no-repeat
+    background-size: cover
+    min-width: 200px
     +media(1024)
         padding: 40px 0
+    +media(1400)
+        background: #edf2f5
     & a
         font-size: 24px
         line-height: 26px
-        color: $buttonBorder
+        color: $primary
         font-family: "Rubik"
+        +media(1024)
+            color: $buttonBorder
     & p 
         max-width: 180px
         font-size: 13px
         line-height: 20px
-        color: $textDarkTwo
+        color: $textLight
         font-family: "Rubik"
+        +media(1400)
+            color: $textDarkTwo
 .island-nav
     & p
-        min-width: 270px
         font-size: 16px
         line-height: 24px
         color: $textDark
         font-family: "Rubik"
         +media(768)
-            min-width: 460px
+            min-width: 400px
 .catch-wave
     background: url(../img/bg-two.jpg) no-repeat
     background-position: 80% 80%
@@ -169,6 +177,9 @@ main
             line-height: 56px
             color: $textLight
             font-family: "Rubik"
+            +media(1024)
+                font-size: 66px
+                line-height: 76px
             +media(1440)
                 font-size: 56px
                 line-height: 66px
@@ -231,7 +242,6 @@ main
         color: $textDark
         font-family: "Rubik"
     & .bottomCard
-        max-width: 270px
         transition: all 0.3s ease
         &:hover
             filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
@@ -246,14 +256,23 @@ main
                 left: 0
                 background: url(../img/star.svg)
         & .before-plus
-            &:before
+            &::before
                 content: ''
                 position: absolute
                 width: 60px
                 height: 190px
                 top: 0
                 left: 0
+                z-index: 2
                 background: url(../img/star-plus.svg)
+            &::after
+                content: ''
+                position: absolute
+                width: 60px
+                height: 100%
+                top: 0
+                left: 0
+                background: $buttonBorder
         & h3
             font-size: 18px
             line-height: 22px
@@ -296,11 +315,27 @@ main
                 top: 7%
                 left: calc( 100% + 7px )
                 background: url(../img/arrow-three.svg)
-.main-bottom
+#main .main-bottom
     padding: 90px 0
-    & .padding
-        padding-top: 13px
     & .ask-question
+        &::before
+            content: ''
+            position: absolute
+            top: 13px
+            left: 0
+            width: 50px
+            height: 270px
+            border: 4px solid #ffb700
+            border-right: transparent
+        &::after
+            content: ''
+            position: absolute
+            top: 13px
+            right: 0
+            width: 50px
+            height: 270px
+            border: 4px solid #ffb700
+            border-left: transparent
         & img 
             top: 80%
             left: 50%
@@ -311,32 +346,6 @@ main
             line-height: 26px
             color: $textDark
             font-family: "Rubik"
-            &::before
-                content: ''
-                position: absolute
-                top: 50%
-                left: 0
-                width: 50px
-                height: 270px
-                border: 4px solid #ffb700
-                border-right: transparent
-                +media(1024)
-                    content: none
-                +media(1440)
-                    content: ''
-            &::after
-                content: ''
-                position: absolute
-                top: 50%
-                right: 0
-                width: 50px
-                height: 270px
-                border: 4px solid #ffb700
-                border-left: transparent
-                +media(1024)
-                    content: none
-                +media(1440)
-                    content: ''
         & p 
             max-width: 150px
             font-size: 13px
@@ -367,8 +376,8 @@ main
         color: $textDark
         font-family: "Rubik"
     & .main-bottom__card
+        min-height: 270px
         padding: 25px 20px
-        max-width: 270px
         & a
             & b
                 font-size: 18px

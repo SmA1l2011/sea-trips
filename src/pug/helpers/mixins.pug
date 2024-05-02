@@ -1,5 +1,5 @@
 mixin card(img, title, sell, text, before)
-    figure.offer__card.col-3.position-relative.p-0
+    figure.offer__card.col-11.col-sm-9.col-md-6.col-lg-5.col-xl-3.position-relative.p-0
         figcaption.offer__card-wrapper.m-auto
             svg.icon.d-block.m-auto.mb-4
                 use(xlink:href=img)
@@ -8,14 +8,15 @@ mixin card(img, title, sell, text, before)
             p.m-0.fw-normal= text
 
 mixin bottomCard(img, before, title, text, sell, funk)
-    figure
+    figure.offset-sm-1.offset-md-0.col-12.col-sm-10.col-md-6.col-xl-3
         figcaption.bottomCard.p-0.m-xxl-0.m-auto.container.position-relative
             .row
-                .col 
-                    img.mb-3(src=img, alt="#")
+                .col
+                    .mb-3.position-relative(class=before)
+                        img.w-100(src=img, alt="#") 
             .row.px-2
                 .col 
-                    h3.fw-normal(class=before)= title
+                    h3.fw-normal= title
                     p.fw-normal= text
             .row.px-2
                 .col
@@ -23,7 +24,7 @@ mixin bottomCard(img, before, title, text, sell, funk)
                 .col
                     a.funk.text-uppercase.fw-normal.text-center.text-decoration-none.position-relative(href="#")= funk
 mixin mainBottomCard(file, text, bg)
-    figure
+    figure.pt-3.col-12.col-sm-10.col-md-6.col-xl-3.offset-sm-1.offset-md-0
         figcaption.main-bottom__card.container.h-100.d-flex.flex-column.justify-content-between(class=bg)
             .row
                 .col 
