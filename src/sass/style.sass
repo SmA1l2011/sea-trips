@@ -133,7 +133,7 @@ main
             line-height: 42px
 .island .island-info
     padding: 20px 0 90px 0
-    background: 50% 70% url(../img/island_img.png) no-repeat
+    background: $gradientBgThree, $textLight url(../img/island_img.png) no-repeat 50% 70%
     background-size: cover
     min-width: 200px
     +media(1024)
@@ -145,8 +145,6 @@ main
         line-height: 26px
         color: $primary
         font-family: "Rubik"
-        +media(1024)
-            color: $buttonBorder
     & p 
         max-width: 180px
         font-size: 13px
@@ -243,28 +241,29 @@ main
         font-family: "Rubik"
     & .bottomCard
         transition: all 0.3s ease
+        &:before
+            content: ''
+            position: absolute
+            width: 60px
+            height: 60px
+            top: 0
+            left: 0
+            z-index: 2
+            background: url(../img/star.svg)
         &:hover
             filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
             background-color: $textLight
-        & .before
-            &:before
-                content: ''
-                position: absolute
-                width: 60px
-                height: 60px
-                top: 0
-                left: 0
-                background: url(../img/star.svg)
         & .before-plus
             &::before
                 content: ''
                 position: absolute
-                width: 60px
-                height: 190px
-                top: 0
-                left: 0
+                width: 40px
+                height: 32px
+                top: 50%
+                left: 12px
+                transform: translateY(-50%)
                 z-index: 2
-                background: url(../img/star-plus.svg)
+                background: url(../img/bike-plus.svg)
             &::after
                 content: ''
                 position: absolute
@@ -283,7 +282,12 @@ main
             line-height: 19px
             color: $textDarkTwo
             font-family: "Rubik"
-            max-width: 230px
+            +media(768)
+                max-width: 265px
+            +media(1024)
+                max-width: unset
+            +media(1440)
+                max-width: 265px
         & .sell
             font-size: 24px
             line-height: 44px
@@ -404,7 +408,6 @@ main
             line-height: 19px
             color: #fefefe
             font-family: "Rubik"
-            max-width: 230px
         & .button
             max-width: 110px
             padding: 4.1px 10px
